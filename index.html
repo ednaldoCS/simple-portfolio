@@ -19,68 +19,216 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Css -->
-
+    <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Google icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <title>Ednaldo Cavalcante</title>
 
-    <style>
-      .myInformation{
-        border: 1px solid red;
-      }
 
-      .areaProgresso{
-        width: 100%;
-        border: 1px solid  blue;
-        border-radius: 20px;
-      }
-      .progressBar{
-        width: 80%;
-        height: 15px;
-        border-radius: 20px;
-        background: #6e6e ;
-      }
+    <script type="text/javascript">
+      let itens=[]
+      function mostra(id) {
+        itens=document.querySelectorAll('div.projetoItem')
+        let item = document.querySelectorAll('div.projetoItem')
+        item.forEach((e)=>{
+          itens.forEach((e)=>{
+            let tipo=e.getAttribute('data-tipo') 
+            if (tipo!=''&&id==='html-all') {
+              e.style.display='block' 
+            }else if (tipo==id){
+              e.style.display='block'
+            }else{
+              e.style.display='none'
+            }
+          })
+        })
+      console.log(itens)
 
-      .skillsInformation{
-        border: 1px solid blue;
-        
       }
-    </style>
+    </script>
   </head>
   <body>
     <div id="container">
-      <div class="myInformation">
-        <div>
-          <img src="imgs/avatar.png">
+      <div class="topo">
+        <div class="myInformation">
+          <div class="avatar">
+            <img src="imgs/avatar.png">
+          </div>
+          <div class="information">
+            <div class="info">
+              <div class="name">
+                <h2>Ednaldo Cavalcante</h2>
+                <div>front end developer</div>
+              </div>
+
+              <div class="contact">
+                <div>
+                  <span class="material-icons">email</span><a href="">ednaldoend007@gmail.com</a>
+                </div>
+                <div>
+                  <span class="material-icons">phone</span>
+                  <a href="">(+55) 16 99712-6087</a>
+                </div>
+              </div>
+            </div>
+            
+            <p>Self-motivated developer, who is willing to learn and create outstanding UI applications. 
+            </p>
+          </div>
         </div>
-        <div>
-          <h2>Ednaldo Cavalcante</h2>
-          <p>front end developer</p>
 
-          <div><span class="material-icons">email</span>ednaldoend007@gmail.com</div>
-          <div><span class="material-icons">phone</span>(+55) 16 99712-6087</div>
+        <div class="skillsAndHobbies">
+          <div class="skills">
+            <div class="title">
+              <h2>Skills</h2>
+            </div>
+            <div class="html">
+                <div>HTML</div>
+              <div class="areaProgresso"><div class="progressBar"></div></div>
+            </div>
+            <div class="css">
+              <div>CSS</div>
+              <div class="areaProgresso"><div class="progressBar"></div></div>
+            </div>
+            <div class="js">
+              <div>JS - JavaScript</div>
+              <div class="areaProgresso"><div class="progressBar"></div></div>
+            </div>
+            <div class="bootstrap">
+              <div>Bootstrap</div>
+              <div class="areaProgresso"><div class="progressBar"></div></div>
+            </div>
+            <div class="php"> 
+              <div>PHP</div>
+              <div class="areaProgresso"><div class="progressBar"></div></div>
+            </div>
+          </div>
 
+          <div  class="hobbies">
+            <div class="title2">
+              <h2>Hobbies</h2>
+            </div>
+            <div class="hobbieItens">
+              <div class="hobbieItem">
+                <div><h1>Ciclismo</h1></div>
+                <div><img src="imgs/bike.jpg"></div>
+              </div>
+              <div class="hobbieItem">
+                <h1>Video Game</h1>
+                <div><img src="imgs/video-game.jpg"></div>
+              </div>
+              <div class="hobbieItem">
+                <h1>Fultebol</h1>
+                <div><img src="imgs/fultebol.jpg"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="skillsInformation">
-        <div>
-          HTML
-          <div class="areaProgresso"><div class="progressBar"></div></div>
-        </div>
-        <div>CSS</div>
-        <div>JS - javaScript</div>
-        <div>Bootstrap</div>
-        <div>PHP</div>
-      </div>
-      <div class="hobbiesInformation">
-        Hobbies
-      </div>
 
-      <div class="projetos">
-        Projetos
+
+      <div class="principal">
+        <div class="projetos">
+          <div class="title"><h1>Projetos</h1></div>
+          <div class="btns">
+            <ul>
+              <li><button class="btn btn-info" id="html-all" onclick="mostra(this.id)">ALL/HTML</button></li>
+              <li><button  class="btn btn-info" id="css" onclick="mostra(this.id)">CSS</button></li>
+              <li><button class="btn btn-info" id="js" onclick="mostra(this.id)">JS</button></li>
+            </ul>
+          </div>
+
+          <div class="imgsDemos" id="projetos">
+            <div class="projetoItem" data-tipo='js'>
+              <a href="https://ednaldocs.github.io/checkout-page/"><img src="imgs/checkoutPage.png"></a>
+              <div class="html" data-tipo=''>
+                <h1>Página simples de checkout </h1>
+                <p>Página de checkout responsiva, feita com JS como desafio de <a href="http://devChallenges.io">devChallenges.io</a></p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/checkout-page/">Demo</a>
+                  <a class="btn" href="https://github.com/ednaldoCS/checkout-page">Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div  class="projetoItem" data-tipo='css'>
+              <img src="imgs/edieHomePage.png">
+              <div>
+                <h1>Edie homepage</h1>
+                <p>Página completa, desafio feito com html,css e js </p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/homepage/">Demo</a>
+                  <a class="btn" href="https://github.com/ednaldoCS/homepage">Code </a>
+                </div>
+              </div>
+            </div>
+
+            <div  class="projetoItem" data-tipo='html-all'>
+              <img src="imgs/erro404page.png">
+              <div>
+                <h1>Erro 404</h1>
+                <p>Página de retorno de erro simples</p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/erro-404/">Demo</a>
+                  <a class="btn" href="https://github.com/ednaldoCS/erro-404">Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="projetoItem" data-tipo='css'>
+              <img src="imgs/interiorDesigner.png">
+              <div>
+                <h1>Designer de Interiores</h1>
+                <p>Página feita para interior Designer <a href="devChallenges.io">devChallenges.io</a> </p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/interior-consultant/">Demo</a>
+                  <a class="btn" href="https://github.com/ednaldoCS/interior-consultant">Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="projetoItem" data-tipo='html-all'>
+              <img src="imgs/myTeam.png">
+              <div>
+                <h1>Devs page</h1>
+                <p>Página de apresentação de team - <a href="devChallenges.io">devChallenges.io</a></p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/Myteam/">Demo</a>
+                  <a class="btn"  href="https://github.com/ednaldoCS/Myteam">Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="projetoItem" data-tipo='css'>
+              <img src="imgs/recipePage.png">
+              <div>
+                <h1>Página de Receita</h1>
+                <p>Simples página de receitas - <a href="devChallenges.io">devChallenges.io</a></p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/recipe-blog/">Demo</a>
+                  <a class="btn" href="https://github.com/ednaldoCS/recipe-blog">Code</a>
+                </div>
+              </div>
+            </div>
+
+            <div  class="projetoItem" data-tipo='css'>
+              <img src="imgs/gallery.png">
+              <div>
+                <h1>My gallery</h1>
+                <p>Simples galeria de fotos feita com css - <a href="devChallenges.io">devChallenges.io</a></p>
+                <div>
+                  <a class="btn btn-info" href="https://ednaldocs.github.io/my-gallery/">Demo</a>
+                  <a class="btn" href="https://github.com/ednaldoCS/my-gallery">Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
+
+
   </body>
 </html>

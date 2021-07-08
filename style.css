@@ -1,0 +1,299 @@
+body{
+        background: repeating-radial-gradient(white 50%, blue);
+      }
+      #container{
+        background:
+          linear-gradient(#010214 5%, #000CFF 20%, #010214 50%, #000CFF ,#010214);
+        width: 80%;
+        margin: 0px auto;
+        color: white;
+      }
+
+      .topo{
+        margin-bottom: 30px;
+      }
+
+      .myInformation{
+        height: 300px;
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .information{
+        width: 80%;
+      }
+
+      .info{
+        display: flex;
+        justify-content: space-between;
+      }
+      .avatar{
+        width: 20%;
+        height: 100%;
+        margin-right: 40px;
+      }
+
+      .avatar img{
+        width: 100%;
+      }
+      .info .name{
+        font-size: 25px;
+      }
+
+      .info .name>div{
+        font-size: 18px;
+        color: #838383;
+        font-weight: bold;
+      }
+      .info .contact>div{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+      }
+      .info .contact>div span{
+        margin-right: 10px;
+      }
+      .information p{
+        font-size: 18px;
+      }
+
+      .information>p{
+        font-size: 30px;
+        margin-top: 20px;
+      }
+
+
+      .skillsAndHobbies{
+        display: flex;
+        height: 300px;
+      }
+
+      .skills{
+        width: 30%;
+      }
+
+      .skills .title{
+        font-size: 34px;
+        color: yellow;
+        font-weight: bold;
+      }
+
+      .skills>div{
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 20px;
+      }
+
+      .areaProgresso{
+        height: 20px;
+        width: 60%;
+      }
+
+      .html .progressBar{
+        background: #6382F5;
+        height: 100%;
+        width: 90%;
+      }
+      .css .progressBar{
+        background: #6382F5;
+        height: 100%;
+        width: 85%;
+      }
+
+      .js .progressBar{
+        background: #6382F5;
+        height: 100%;
+        width: 70%;
+      }
+
+      .php .progressBar{
+        background: #6382F5;
+        height: 100%;
+        width: 50%;
+      }
+
+      .bootstrap .progressBar{
+        background: #6382F5;
+        height: 100%;
+        width: 80%;
+      }
+
+      .hobbies{
+        width: 70%;
+      }
+
+
+      .hobbieItens{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .hobbieItens>div{
+        width: 90%;
+        
+        text-align: center;
+        padding: 20px;
+      }
+
+      .hobbieItens img{
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      .hobbieItens h1{
+        font-size: 25px;
+      }
+
+
+
+
+      .projetos .title{
+          color: yellow;
+          font-size: 30px;
+          text-align: center;
+          margin-top: 30px;
+      }
+
+      .btns ul{
+        width: 60%;
+        margin: 50px auto;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+      }
+      .btns ul li{
+        margin-left: 10px;
+      }
+      .btns ul li button{
+       width: 150px;
+
+      }
+
+      .imgsDemos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .imgsDemos>div{
+        width: 48%;
+        margin-bottom: 50px;
+        min-width: 350px;
+        margin: 30px auto;
+        background: repeating-conic-gradient( white 45%, blue);
+      }
+
+      .imgsDemos>div>div{
+        background: linear-gradient(black,blue);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px auto;
+        padding: 20px 10px;
+        text-align: center;
+      }
+
+      .imgsDemos>div>div>div{
+        margin: 0px auto;
+      }
+      .imgsDemos img{
+        width: 100%;
+        transform: scale(.8);
+        transition: all ease .2s;
+        border-radius: 12px;
+      }
+      .imgsDemos img:hover{
+        transform: scale(1.0);
+        border-radius: 0px;
+      }
+
+      .btn{
+        color: white;
+        font-size: 25px;
+        transition: all ease .3s;
+      }
+
+      .btn:hover{
+        color: #1B65EE;
+        font-weight: bold;
+      }
+
+
+@media (max-width: 800px) {
+        #container{
+          width: 100%;
+          margin: 0px 0px
+        }
+        .myInformation{
+          padding: 0px 30px;
+        }
+        .info{
+          display: block;
+        }
+        .info .name{
+          font: 18px sans-serif;
+        }
+
+        .info .contact div{
+          font-size: 15px;
+        }
+
+        .information>p{
+          font-size: 15px;
+        }
+        .avatar img{
+          margin-top: 60px;
+        }
+
+
+        .skillsAndHobbies{
+          display: block;
+        }
+
+        .skillsAndHobbies h2{
+          margin: 0px auto;
+        }
+
+        .skills{
+          width: 100%;
+        }
+
+        .hobbies{
+          width: 100%;
+        }
+
+        .hobbies .title2{
+          color: yellow;
+          margin-left: 40%;
+          margin-top: 30px;
+        }
+
+        .hobbieItens h1{
+          font-size: 18px;
+        }
+
+        .principal{
+          margin-top: 300px;
+        }
+
+
+        .btns ul{
+          width: 100%;
+        }
+
+        .btns ul li button{
+          width: 100%;
+          font-size: 15px;
+        }
+
+        .imgsDemos>div{
+          width:90%;
+
+          margin: 30px auto;
+          background: repeating-conic-gradient( white 45%, blue);
+        }
+      }
